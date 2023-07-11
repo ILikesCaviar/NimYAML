@@ -909,11 +909,11 @@ proc hasIgnore(t: typedesc): bool {.compileTime.} =
   else:
     return false
 
-proc constructObjectDefault*(
+#[ proc constructObjectDefault*(
     s: var YamlStream, c: ConstructionContext, result: var RootObj) =
   # specialization of generic proc for RootObj, doesn't do anything
   return
-
+ ]#
 proc constructObjectDefault*[O: object|tuple](
     s: var YamlStream, c: ConstructionContext, result: var O)
     {.raises: [YamlConstructionError, YamlStreamError].} =
